@@ -27,7 +27,7 @@ pipeline {
             steps {
                 sh """
                 mvn deploy -DaltDeploymentRepository=nexus-releases::default::${NEXUS_URL} \
-                --settings settings.xml
+                --settings /etc/maven/settings.xml
                 """
             }
         }
