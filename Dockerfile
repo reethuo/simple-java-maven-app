@@ -5,7 +5,7 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the application JAR file into the container
-COPY /var/lib/jenkins/workspace/nexus/target/my-app-1.0.0.jar my-app.jar
+COPY target/*.jar my-app.jar
 
 # Expose the application port (change if needed)
 EXPOSE 8082
