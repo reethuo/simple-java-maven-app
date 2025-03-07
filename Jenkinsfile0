@@ -1,6 +1,11 @@
 pipeline {
+
     agent any
-    
+
+    tools {
+        maven 'Maven 3.9.6'  // Ensure this matches the Maven name in Jenkins configuration
+    }
+
     environment {
         DOCKER_HUB_CREDENTIALS = 'docker_hub'
         IMAGE_NAME = 'reethu2/myapp'
