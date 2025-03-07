@@ -3,14 +3,14 @@ pipeline {
     
     environment {
         DOCKER_HUB_CREDENTIALS = 'docker_hub'
-        IMAGE_NAME = 'your-dockerhub-username/myapp'
+        IMAGE_NAME = 'reethu2/myapp'
         IMAGE_TAG = 'latest'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git 'https://github.com/your-username/your-docker-project.git'
+                git 'https://github.com/reethuo/simple-java-maven-app.git'
             }
         }
 
